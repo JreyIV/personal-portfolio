@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: okine;
+  src: url("./fonts/Okine-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: okine;
+  src: url("./fonts/Okine-Normal.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.max-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
