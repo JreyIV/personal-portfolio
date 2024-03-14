@@ -5,19 +5,19 @@ export default function App() {
   return (
     <main className="relative">
       <Nav />
-      <section>
+      <section className="padding-b">
         <Hero />
       </section>
-      <section>
+      <section className="padding">
         <About />
       </section>
-      <section>
+      <section className="padding">
         <Projects />
       </section>
-      <section>
+      <section className="padding">
         <Contact />
       </section>
-      <section>
+      <section className="bg-black padding-x padding-t pb-8">
         <Footer />
       </section>
     </main>
