@@ -8,7 +8,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       <div className="text-center">
-        <h1 className="text-8xl md:text-6xl text-off-white font-okine font-bold mb-8">
+        <h1 className="text-6xl md:text-8xl text-off-white font-okine font-bold mb-8">
           Joseph Reyes
         </h1>
         <div className="inline-block">

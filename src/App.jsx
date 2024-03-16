@@ -1,12 +1,20 @@
 import Nav from "./components/Nav";
-import { Hero, About, Projects, Contact, Footer } from "./sections/index";
+import {
+  Hero,
+  Hero2,
+  About,
+  Projects,
+  Contact,
+  Footer,
+} from "./sections/index";
 
 export default function App() {
   return (
     <main className="relative">
       <Nav />
       <section className="padding-b">
-        <Hero />
+        {/* <Hero /> */}
+        <Hero2 />
       </section>
       <section className="padding">
         <About />

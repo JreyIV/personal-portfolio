@@ -11,6 +11,10 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   const menuVars = {
     initial: {
       scaleY: 0,
@@ -27,20 +31,6 @@ const Nav = () => {
       transition: {
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-  const linkVars = {
-    initial: {
-      y: "30vh",
-      transition: {
-        duration: 0.5,
-      },
-      open: {
-        y: 0,
-        transition: {
-          duration: 0.7,
-        },
       },
     },
   };
@@ -74,26 +64,28 @@ const Nav = () => {
   }, [isSmallScreen]);
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="padding-x py-8 absolute z-50 w-full">
       <nav className="flex justify-between items-center max-container">
         <a href="/" className="flex">
           <h1 className="text-4xl font-okine font-bold ">Joseph.</h1>
         </a>
         <ul className="flex-1 flex justify-center items-center gap-20 max-lg:hidden">
           {NavLinks.map((link) => (
-            <li key={link.label}>
+            <motion.li key={link.label} whileHover={{ scale: 1.25 }}>
               <a href={link.href} className="font-okine leading-normal text-lg">
                 {link.label}
               </a>
-            </li>
+            </motion.li>
           ))}
         </ul>
-        <div
+        <motion.div
+          whileHover={{ scale: 1.25 }}
+          whileTap={{ scale: 0.95 }}
           className="hidden max-lg:block cursor-pointer"
           onClick={toggleMenu}
         >
           <img src={hamburger} alt="hamburger" width={25} height={25} />
-        </div>
+        </motion.div>
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -101,7 +93,7 @@ const Nav = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed left-0 top-0 w-full h-screen origin-top bg-black bg-opacity-90 p-10"
+              className="fixed left-0 top-0 w-full h-screen origin-top bg-black bg-opacity-90 p-10 z-50"
             >
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
@@ -126,6 +118,7 @@ const Nav = () => {
                           <a
                             href={link.href}
                             className="font-okine text-6xl leading-normal text-off-white uppercase"
+                            onClick={closeMenu}
                           >
                             {link.label}
                           </a>

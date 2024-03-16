@@ -13,6 +13,7 @@ export default {
       "4xl": ["48px", "58px"],
       "6xl": ["64px", "80px"],
       "8xl": ["96px", "106px"],
+      Mammoth: ["120px", "110px"],
     },
     extend: {
       fontFamily: {
