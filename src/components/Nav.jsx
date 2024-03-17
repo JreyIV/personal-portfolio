@@ -81,7 +81,7 @@ const Nav = () => {
         <motion.div
           whileHover={{ scale: 1.25 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden max-lg:block cursor-pointer"
+          className="hidden max-lg:block cursor-pointer fixed right-0 pr-5"
           onClick={toggleMenu}
         >
           <img src={hamburger} alt="hamburger" width={25} height={25} />

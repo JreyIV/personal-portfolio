@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import {
-  Hero,
+  //   Hero,
   Hero2,
   About,
   Projects,
@@ -12,11 +12,11 @@ export default function App() {
   return (
     <main className="relative">
       <Nav />
-      <section className="padding-b">
+      <section className="">
         {/* <Hero /> */}
         <Hero2 />
       </section>
-      <section className="padding">
+      <section className="">
         <About />
       </section>
       <section className="padding">

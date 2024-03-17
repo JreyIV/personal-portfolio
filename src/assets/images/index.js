@@ -3,6 +3,7 @@ import HeroImageFull from "./HeroImageFull.jpg";
 import HeroImageMountain from "./HeroImageMountain.png";
 import HeroImageCity from "./HeroImageCity.png";
 import HeroImageLake from "./HeroImageLake.png";
+import VenteuxPic from "./VenteuxPic.jpg";
 
 export {
   HeroImage,
@@ -10,4 +11,5 @@ export {
   HeroImageMountain,
   HeroImageCity,
   HeroImageLake,
+  VenteuxPic,
 };

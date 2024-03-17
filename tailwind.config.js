@@ -18,6 +18,8 @@ export default {
     extend: {
       fontFamily: {
         okine: ["Okine"],
+        palanquin: ["Palanquin", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       screens: {
         wide: "1440px",
@@ -25,6 +27,9 @@ export default {
       colors: {
         "off-white": "#eae5d3",
         "slate-gray": "#6D6D6D",
+        "black-gray": "#181818",
+        "brand-green": "#67B99A",
+        "space-purple-dark": "#00000F",
       },
     },
   },
