@@ -27,7 +27,8 @@ export default {
       colors: {
         "off-white": "#eae5d3",
         "slate-gray": "#6D6D6D",
-        "black-gray": "#181818",
+        "black-gray": "#212121",
+        "black-gray-dark": "#18191A",
         "brand-green": "#67B99A",
         "space-purple-dark": "#00000F",
       },

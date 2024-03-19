@@ -3,6 +3,7 @@ import {
   //   Hero,
   Hero2,
   About,
+  Skills,
   Projects,
   Contact,
   Footer,
@@ -18,6 +19,9 @@ export default function App() {
       </section>
       <section className="">
         <About />
+      </section>
+      <section className="">
+        <Skills />
       </section>
       <section className="padding">
         <Projects />

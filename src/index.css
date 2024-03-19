@@ -40,13 +40,6 @@
       border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
   }
-
-  .blob {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: #fff;
-  }
 }
 
 @layer utilities {
