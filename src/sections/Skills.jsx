@@ -5,7 +5,7 @@ import {
   animate,
 } from "framer-motion";
 import { useEffect } from "react";
-import { react, javascript, html, css, node } from "../assets/icons";
+import { skills } from "../constants";
 
 const colors = ["#036666", "#469D89", "#99E2B4"];
 
@@ -21,32 +21,37 @@ const Skills = () => {
       repeatType: "mirror",
     });
   });
+
   return (
     <motion.section
-      className="bg-black w-full h-60 flex items-center justify-center gap-40 max-lg:gap-20 p-10"
+      className="bg-black-gray-dark w-full"
       style={{
         backgroundImage,
       }}
     >
-      <div className="text-off-white text-center font-okine font-bold text-xl">
-        <img src={react} alt="react" width={100} height={100} />
-        <h1>React</h1>
-      </div>
-      <div className="text-off-white text-center font-okine font-bold text-xl">
-        <img src={javascript} alt="javascript" width={90} height={90} />
-        <h1>Javascript</h1>
-      </div>
-      <div className="text-off-white text-center font-okine font-bold text-xl">
-        <img src={html} alt="html" width={80} height={80} />
-        <h1>HTML</h1>
-      </div>
-      <div className="text-off-white text-center font-okine font-bold text-xl">
-        <img src={css} alt="css" width={80} height={80} />
-        <h1>CSS</h1>
-      </div>
-      <div className="text-off-white text-center font-okine font-bold text-xl">
-        <img src={node} alt="node" width={100} height={100} />
-        <h1>Node</h1>
+      <div className="flex flex-wrap items-center justify-center gap-40 max-xl:gap-20 p-10">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -200 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: index * 0.05, type: "spring" },
+            }}
+            viewport={{ once: true }}
+            className="text-off-white text-center font-okine font-bold text-xl overflow-hidden"
+          >
+            <img
+              src={skill.src}
+              alt={skill.alt}
+              className="max-w-full h-auto"
+              width={skill.width}
+              height={skill.height}
+            />
+            <h1>{skill.title}</h1>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );

@@ -30,7 +30,6 @@ export default {
         "black-gray": "#212121",
         "black-gray-dark": "#18191A",
         "brand-green": "#67B99A",
-        "space-purple-dark": "#00000F",
       },
     },
   },
