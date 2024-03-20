@@ -33,11 +33,11 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -200 }}
+            initial={{ opacity: 0, y: -75 }}
             whileInView={{
               opacity: 1,
-              x: 0,
-              transition: { delay: index * 0.05, type: "spring" },
+              y: 0,
+              transition: { delay: index * 0.1, type: "spring" },
             }}
             viewport={{ once: true }}
             className="text-off-white text-center font-okine font-bold text-xl overflow-hidden"
