@@ -23,7 +23,7 @@ export default function App() {
       <section className="">
         <Skills />
       </section>
-      <section className="padding">
+      <section className="">
         <Projects />
       </section>
       <section className="padding">

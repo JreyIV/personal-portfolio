@@ -37,7 +37,7 @@ const About = () => {
   return (
     <section
       id="about-me"
-      className="bg-black-gray flex items-center p-20 gap-10 sm:p-10 w-full max-lg:flex-col relative "
+      className="bg-black-gray flex items-center p-20 max-md:p-10 gap-10 w-full max-lg:flex-col relative "
     >
       {/* picture of me */}
       <motion.div

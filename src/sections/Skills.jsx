@@ -39,7 +39,7 @@ const Skills = () => {
               y: 0,
               transition: { delay: index * 0.1, type: "spring" },
             }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.5, once: true }}
             className="text-off-white text-center font-okine font-bold text-xl overflow-hidden"
           >
             <img
