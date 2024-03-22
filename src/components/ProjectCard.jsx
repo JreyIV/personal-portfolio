@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-const ProjectCard = ({ image, title }) => {
+const ProjectCard = ({ title, image, description, url, skills, onClick }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -41,44 +41,55 @@ const ProjectCard = ({ image, title }) => {
     y.set(0);
   };
 
+  const handleClick = () => {
+    onClick(title, description, url, skills);
+  };
+
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-slate-500 to-teal-200 cursor-pointer"
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
-    >
-      <div
-        className="absolute inset-4 grid place-content-center rounded-xl  shadow-lg"
+    <>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+        className="project-card relative h-96 w-80 rounded-xl cursor-pointer"
         style={{
-          backgroundImage: `url(${image})`,
-          transform: "translateZ(75px)",
+          rotateX,
+          rotateY,
           transformStyle: "preserve-3d",
         }}
       >
-        <h1
-          className="text-center text-2xl font-okine font-bold text-white"
+        <div
+          className="absolute inset-4 grid place-content-center rounded-xl  shadow-lg"
           style={{
-            transform: "translateZ(50px)",
+            backgroundImage: `url(${image})`,
+            backgroundSize: "cover",
+            backgroundPositionX: "center",
+            transform: "translateZ(75px)",
+            transformStyle: "preserve-3d",
           }}
         >
-          {title}
-        </h1>
-        <p
-          className="font-okine text-lg"
-          style={{
-            transform: "translateZ(50px)",
-          }}
-        >
-          Click Me for Details!
-        </p>
-      </div>
-    </motion.div>
+          <h1
+            className="text-center text-2xl font-okine font-bold text-white"
+            style={{
+              transform: "translateZ(50px)",
+            }}
+          >
+            {title}
+          </h1>
+          <p
+            className="font-okine text-lg"
+            style={{
+              transform: "translateZ(50px)",
+            }}
+          >
+            Click Me for Details!
+          </p>
+        </div>
+      </motion.div>
+      <div className="bg-white"></div>
+    </>
   );
 };
 

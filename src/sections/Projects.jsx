@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -6,7 +6,9 @@ import {
   animate,
 } from "framer-motion";
 
+import { projects } from "../constants";
 import ProjectCard from "../components/ProjectCard";
+import ProjectModal from "../components/ProjectModal";
 
 const colors = ["#036666", "#469D89", "#99E2B4"];
 
@@ -22,6 +24,15 @@ const Projects = () => {
       repeatType: "mirror",
     });
   });
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalProps, setModalProps] = useState({});
+
+  const handleClick = (title, description, url, skills) => {
+    console.log(`You clicked: ${title}`);
+    setModalProps({ title, description, url, skills });
+    setIsOpen(true);
+  };
 
   return (
     <motion.section
@@ -42,20 +53,22 @@ const Projects = () => {
           developer.
         </p>
       </div>
-      <div className="flex justify-center gap-10 p-20">
-        <ProjectCard
-          title="Example 1"
-          image={"https://picsum.photos/id/1018/720/480"}
-        />
-        <ProjectCard
-          title="Example 2"
-          image={"https://picsum.photos/id/1018/720/480"}
-        />
-        <ProjectCard
-          title="Example 3"
-          image={"https://picsum.photos/id/1018/720/480"}
-        />
+      <div className="flex flex-wrap justify-center gap-10 px-10 pt-20">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            image={project.image}
+            description={project.description}
+            url={project.url}
+            skills={project.skills}
+            onClick={handleClick}
+          />
+        ))}
       </div>
+      {modalIsOpen && (
+        <ProjectModal {...modalProps} handleCloseModal={setIsOpen} />
+      )}
     </motion.section>
   );
 };

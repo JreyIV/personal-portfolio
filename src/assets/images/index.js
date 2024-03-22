@@ -4,6 +4,8 @@ import HeroImageMountain from "./HeroImageMountain.png";
 import HeroImageCity from "./HeroImageCity.png";
 import HeroImageLake from "./HeroImageLake.png";
 import VenteuxPic from "./VenteuxPic.jpg";
+import placeholder from "./placeholder.png";
+import segthlon from "./segthlon.png";
 
 export {
   HeroImage,
@@ -12,4 +14,6 @@ export {
   HeroImageCity,
   HeroImageLake,
   VenteuxPic,
+  placeholder,
+  segthlon,
 };

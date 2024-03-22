@@ -26,7 +26,7 @@ export default function App() {
       <section className="">
         <Projects />
       </section>
-      <section className="padding">
+      <section className="">
         <Contact />
       </section>
       <section className="bg-black padding-x padding-t pb-8">
