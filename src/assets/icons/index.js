@@ -5,5 +5,6 @@ import html from "./html.svg";
 import css from "./css.svg";
 import node from "./node.svg";
 import close from "./close.svg";
+import check from "./check.svg";
 
-export { hamburger, react, javascript, html, css, node, close };
+export { hamburger, react, javascript, html, css, node, close, check };

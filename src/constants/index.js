@@ -79,3 +79,10 @@ export const projects = [
     skills: ["Javascript", "HTML", "CSS", "React"],
   },
 ];
+
+export const checklist = [
+  "Your full name",
+  "A valid email address",
+  "Company you work for (if applicable)",
+  "A brief description of your inquiry",
+];
