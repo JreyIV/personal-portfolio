@@ -1,3 +1,4 @@
+import myLogo from "./myLogo.svg";
 import hamburger from "./hamburger.svg";
 import react from "./react.svg";
 import javascript from "./javascript.svg";
@@ -11,6 +12,7 @@ import linkedin from "./linkedin.svg";
 import github from "./github.svg";
 
 export {
+  myLogo,
   hamburger,
   react,
   javascript,

@@ -6,7 +6,7 @@ import {
   useScroll,
 } from "framer-motion";
 import { NavLinks } from "../constants";
-import { hamburger } from "../assets/icons";
+import { myLogo, hamburger } from "../assets/icons";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,8 +81,8 @@ const Nav = () => {
         }}
         animate={isSmallScreen ? "visible" : isNavHidden ? "hidden" : "visible"}
       >
-        <a href="/" className="absolute top-2 left-10 flex">
-          <h1 className="text-3xl font-okine font-bold ">Joseph.</h1>
+        <a href="/" className="absolute top-0 left-20 flex">
+          <img src={myLogo} alt="logo" width={70} height={70} />
         </a>
         <ul className="flex-1 flex justify-center items-center gap-20 max-lg:hidden">
           {NavLinks.map((link) => (
@@ -129,7 +129,10 @@ const Nav = () => {
                   <ul>
                     {NavLinks.map((link) => (
                       <div key={link.label}>
-                        <li key={link.label}>
+                        <motion.li
+                          key={link.label}
+                          whileHover={{ scale: 1.25 }}
+                        >
                           <motion.a
                             href={link.href}
                             className="font-okine text-6xl leading-normal text-off-white uppercase"
@@ -138,7 +141,7 @@ const Nav = () => {
                           >
                             {link.label}
                           </motion.a>
-                        </li>
+                        </motion.li>
                       </div>
                     ))}
                   </ul>
