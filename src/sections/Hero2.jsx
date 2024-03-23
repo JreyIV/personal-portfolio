@@ -13,7 +13,10 @@ const Hero2 = () => {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   return (
-    <div className="w-full h-screen overflow-hidden relative grid place-items-center">
+    <div
+      id="home"
+      className="w-full h-screen overflow-hidden relative grid place-items-center"
+    >
       <motion.div style={{ y: textY }} className="text-center relative z-40">
         <h1 className="text-6xl md:text-8xl text-off-white font-okine font-bold">
           Joseph Reyes

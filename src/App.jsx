@@ -13,23 +13,23 @@ export default function App() {
   return (
     <main className="relative">
       <Nav />
-      <section className="">
+      <section>
         {/* <Hero /> */}
         <Hero2 />
       </section>
-      <section className="">
+      <section>
         <About />
       </section>
-      <section className="">
+      <section>
         <Skills />
       </section>
-      <section className="">
+      <section>
         <Projects />
       </section>
-      <section className="">
+      <section>
         <Contact />
       </section>
-      <section className="bg-black padding-x padding-t pb-8">
+      <section>
         <Footer />
       </section>
     </main>
