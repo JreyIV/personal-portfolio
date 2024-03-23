@@ -90,8 +90,7 @@ const About = () => {
             lifting.
           </p>
           <p className="text-off-white font-palanquin mt-5">
-            Feel free to reach out and connect with me! Oh, and by the way... I
-            accept bribes in the form of boba and coffee.
+            Feel free to reach out and connect with me!
           </p>
 
           {/* Infos */}

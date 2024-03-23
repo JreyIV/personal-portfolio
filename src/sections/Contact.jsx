@@ -66,7 +66,7 @@ const Contact = () => {
           Let&apos;s do something great
         </motion.p>
         <Checklist />
-        <div className="pt-10 flex gap-5">
+        <div className="pt-10 flex gap-5 max-lg:text-center max-lg:justify-center">
           <a href="https://www.linkedin.com/in/joseph-t-reyes/" target="_blank">
             <motion.img
               src={linkedin}

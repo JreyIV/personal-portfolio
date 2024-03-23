@@ -1,34 +1,9 @@
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  animate,
-} from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { skills } from "../constants";
 
-const colors = ["#036666", "#469D89", "#99E2B4"];
-
 const Skills = () => {
-  const color = useMotionValue(colors[0]);
-  const backgroundImage = useMotionTemplate`radial-gradient(100% 100% at 50% 0%, #18191A 70%, ${color})`;
-
-  useEffect(() => {
-    animate(color, colors, {
-      ease: "easeInOut",
-      duration: 5,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  });
-
   return (
-    <motion.section
-      className="bg-black-gray-dark w-full"
-      style={{
-        backgroundImage,
-      }}
-    >
+    <motion.section className="bg-black-gray-dark w-full">
       <div className="flex flex-wrap items-center justify-center gap-40 max-xl:gap-20 p-10">
         {skills.map((skill, index) => (
           <motion.div

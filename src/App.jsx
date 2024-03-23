@@ -13,23 +13,23 @@ export default function App() {
   return (
     <main className="relative">
       <Nav />
-      <section>
+      <section className="overflow-hidden">
         {/* <Hero /> */}
         <Hero2 />
       </section>
-      <section>
+      <section className="overflow-hidden">
         <About />
       </section>
-      <section>
+      <section className="overflow-hidden">
         <Skills />
       </section>
-      <section>
+      <section className="overflow-hidden">
         <Projects />
       </section>
-      <section>
+      <section className="overflow-hidden">
         <Contact />
       </section>
-      <section>
+      <section className="overflow-hidden">
         <Footer />
       </section>
     </main>

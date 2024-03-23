@@ -35,19 +35,6 @@ const Nav = () => {
     },
   };
 
-  const containerVars = {
-    initial: {
-      transition: {
-        staggerChildren: 0.09,
-      },
-    },
-    open: {
-      transition: {
-        staggerChildren: 0.09,
-      },
-    },
-  };
-
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 1024);
@@ -64,17 +51,21 @@ const Nav = () => {
   }, [isSmallScreen]);
 
   return (
-    <header className="padding-x py-8 absolute z-50 w-full">
-      <nav className="flex justify-between items-center max-container">
-        <a href="/" className="flex">
-          <h1 className="text-4xl font-okine font-bold ">Joseph.</h1>
+    <header className="py-8 absolute z-50 w-full">
+      <motion.nav className="fixed w-[100%] top-0 justify-between bg-black bg-opacity-60 items-center p-5 max-lg:bg-opacity-0 text-white">
+        <a href="/" className="absolute top-2 left-10 flex">
+          <h1 className="text-3xl font-okine font-bold ">Joseph.</h1>
         </a>
         <ul className="flex-1 flex justify-center items-center gap-20 max-lg:hidden">
           {NavLinks.map((link) => (
             <motion.li key={link.label} whileHover={{ scale: 1.25 }}>
-              <a href={link.href} className="font-okine leading-normal text-lg">
+              <motion.a
+                href={link.href}
+                className="font-okine leading-normal text-lg text-white"
+                whileHover={{ color: "#67B99A" }}
+              >
                 {link.label}
-              </a>
+              </motion.a>
             </motion.li>
           ))}
         </ul>
@@ -93,45 +84,42 @@ const Nav = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed left-0 top-0 w-full h-screen origin-top bg-black bg-opacity-90 p-10 z-50"
+              className="fixed left-0 top-0 w-full h-screen origin-top bg-brand-green p-10 z-50"
             >
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
                   <h1 className="text-okine text-lg text-off-white">Joseph.</h1>
-                  <p
+                  <motion.p
                     className="cursor-pointer text-md text-off-white"
+                    whileHover={{ scale: 1.3, color: "#14746F" }}
                     onClick={toggleMenu}
                   >
                     Close
-                  </p>
+                  </motion.p>
                 </div>
-                <motion.div
-                  variants={containerVars}
-                  initial="initial"
-                  animate="open"
-                  className="flex flex-col h-full justify-center items-center gap-4"
-                >
+                <div className="flex flex-col h-full justify-center items-center gap-4">
                   <ul>
                     {NavLinks.map((link) => (
-                      <div className="" key={link.label}>
+                      <div key={link.label}>
                         <li key={link.label}>
-                          <a
+                          <motion.a
                             href={link.href}
                             className="font-okine text-6xl leading-normal text-off-white uppercase"
+                            whileHover={{ color: "#14746F" }}
                             onClick={closeMenu}
                           >
                             {link.label}
-                          </a>
+                          </motion.a>
                         </li>
                       </div>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
+      </motion.nav>
     </header>
   );
 };
