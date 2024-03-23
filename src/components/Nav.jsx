@@ -1,11 +1,28 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { NavLinks } from "../constants";
 import { hamburger } from "../assets/icons";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isNavHidden, setIsNavHidden] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setIsNavHidden(true);
+    } else {
+      setIsNavHidden(false);
+    }
+  });
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -52,7 +69,18 @@ const Nav = () => {
 
   return (
     <header className="py-8 absolute z-50 w-full">
-      <motion.nav className="fixed w-[100%] top-0 justify-between bg-black bg-opacity-60 items-center p-5 max-lg:bg-opacity-0 text-white">
+      <motion.nav
+        className="fixed w-[100%] top-0 justify-between bg-black bg-opacity-60 items-center p-5 max-lg:bg-opacity-0 text-white"
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
+        }}
+        transition={{
+          type: "easeInOut",
+          duration: 0.35,
+        }}
+        animate={isSmallScreen ? "visible" : isNavHidden ? "hidden" : "visible"}
+      >
         <a href="/" className="absolute top-2 left-10 flex">
           <h1 className="text-3xl font-okine font-bold ">Joseph.</h1>
         </a>
