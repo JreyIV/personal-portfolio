@@ -9,9 +9,8 @@ const Projects = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalProps, setModalProps] = useState({});
 
-  const handleClick = (title, description, url, skills) => {
-    console.log(`You clicked: ${title}`);
-    setModalProps({ title, description, url, skills });
+  const handleClick = (title, description, url, skills, github) => {
+    setModalProps({ title, description, url, skills, github });
     setIsOpen(true);
   };
 
@@ -52,6 +51,7 @@ const Projects = () => {
             description={project.description}
             url={project.url}
             skills={project.skills}
+            github={project.github}
             onClick={handleClick}
           />
         ))}

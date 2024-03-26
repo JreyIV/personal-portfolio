@@ -1,7 +1,15 @@
 /* eslint-disable react/prop-types */
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-const ProjectCard = ({ title, image, description, url, skills, onClick }) => {
+const ProjectCard = ({
+  title,
+  image,
+  description,
+  url,
+  skills,
+  onClick,
+  github,
+}) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -42,7 +50,7 @@ const ProjectCard = ({ title, image, description, url, skills, onClick }) => {
   };
 
   const handleClick = () => {
-    onClick(title, description, url, skills);
+    onClick(title, description, url, skills, github);
   };
 
   return (
@@ -79,7 +87,7 @@ const ProjectCard = ({ title, image, description, url, skills, onClick }) => {
             {title}
           </h1>
           <p
-            className="font-okine text-lg"
+            className="font-okine text-lg "
             style={{
               transform: "translateZ(50px)",
             }}

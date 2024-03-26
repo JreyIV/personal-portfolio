@@ -7,6 +7,7 @@ const ProjectModal = ({
   description,
   url,
   skills,
+  github,
   handleCloseModal,
 }) => {
   return (
@@ -48,6 +49,14 @@ const ProjectModal = ({
                 {url}
               </a>
             </p>
+            {github && (
+              <p>
+                Github:{" "}
+                <a href={github} target="_blank">
+                  {github}
+                </a>
+              </p>
+            )}
           </div>
         </motion.div>
       </AnimatePresence>

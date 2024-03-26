@@ -6,6 +6,7 @@ import HeroImageLake from "./HeroImageLake.png";
 import VenteuxPic from "./VenteuxPic.jpg";
 import placeholder from "./placeholder.png";
 import segthlon from "./segthlon.png";
+import nails_by_tay from "./nails_by_tay.png";
 
 export {
   HeroImage,
@@ -16,4 +17,5 @@ export {
   VenteuxPic,
   placeholder,
   segthlon,
+  nails_by_tay,
 };
