@@ -1,5 +1,10 @@
 import { react, javascript, html, css, node } from "../assets/icons";
-import { placeholder, segthlon, nails_by_tay } from "../assets/images";
+import {
+  //   placeholder,
+  segthlon,
+  nails_by_tay,
+  shutopia,
+} from "../assets/images";
 
 export const NavLinks = [
   { href: "#home", label: "Home" },
@@ -72,12 +77,12 @@ export const projects = [
     skills: ["Javascript", "HTML", "CSS", "Bootstrap"],
   },
   {
-    title: "Example 3",
-    image: placeholder,
+    title: "Shutopia",
+    image: shutopia,
     description:
-      "This is a description for example 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit",
-    url: "https://www.segthlon.com/",
-    skills: ["Javascript", "HTML", "CSS", "React"],
+      "I created a shoe website as a side project. This was the project that I used to practice using tailwind for the first time. This was mostly used as a styling practice so I did not spend time adding functionality to the buttons but plan to do so in the future.",
+    url: "https://shutopia.netlify.app/",
+    skills: ["Javascript", "HTML", "Tailwind", "React"],
   },
 ];
 

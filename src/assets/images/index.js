@@ -7,6 +7,7 @@ import VenteuxPic from "./VenteuxPic.jpg";
 import placeholder from "./placeholder.png";
 import segthlon from "./segthlon.png";
 import nails_by_tay from "./nails_by_tay.png";
+import shutopia from "./shutopia.png";
 
 export {
   HeroImage,
@@ -18,4 +19,5 @@ export {
   placeholder,
   segthlon,
   nails_by_tay,
+  shutopia,
 };
