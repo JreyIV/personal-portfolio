@@ -31,7 +31,7 @@ const Hero2 = () => {
             Ideas to reality, one line at a time
           </p>
         </div>
-        <div className="absolute top-60 max-sm:top-40 left-0 right-0 flex justify-center">
+        <div className="absolute top-60 max-sm:top-40 left-0 right-0 flex justify-center max-sm:hidden">
           <motion.a
             href={JosephReyesResume}
             download

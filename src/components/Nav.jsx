@@ -81,7 +81,7 @@ const Nav = () => {
         }}
         animate={isSmallScreen ? "visible" : isNavHidden ? "hidden" : "visible"}
       >
-        <a href="/" className="absolute top-0 left-20 flex">
+        <a href="/" className="absolute top-0 left-20 flex max-sm:hidden">
           <img src={myLogo} alt="logo" width={70} height={70} />
         </a>
         <ul className="flex-1 flex justify-center items-center gap-20 max-lg:hidden">

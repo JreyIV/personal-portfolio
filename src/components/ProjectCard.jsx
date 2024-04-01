@@ -56,6 +56,10 @@ const ProjectCard = ({
   return (
     <>
       <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.3 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onMouseMove={handleMouseMove}

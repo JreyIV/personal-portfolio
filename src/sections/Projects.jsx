@@ -42,7 +42,7 @@ const Projects = () => {
           developer.
         </motion.p>
       </div>
-      <div className="flex flex-wrap justify-center gap-10 px-10 pt-20">
+      <div className="flex flex-wrap justify-center gap-10 max-sm:px-2 px-10 pt-20">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
