@@ -13,23 +13,23 @@ export default function App() {
   return (
     <main className="relative">
       <Nav />
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         {/* <Hero /> */}
         <Hero2 />
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         <About />
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         <Skills />
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         <Projects />
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         <Contact />
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden max-container">
         <Footer />
       </section>
     </main>
