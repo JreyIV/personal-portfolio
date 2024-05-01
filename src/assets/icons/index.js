@@ -10,6 +10,7 @@ import check from "./check.svg";
 import confirm from "./confirm.svg";
 import linkedin from "./linkedin.svg";
 import github from "./github.svg";
+import download from "./download.svg";
 
 export {
   myLogo,
@@ -24,4 +25,5 @@ export {
   confirm,
   linkedin,
   github,
+  download,
 };

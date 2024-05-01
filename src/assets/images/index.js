@@ -8,6 +8,7 @@ import placeholder from "./placeholder.png";
 import segthlon from "./segthlon.png";
 import nails_by_tay from "./nails_by_tay.png";
 import shutopia from "./shutopia.png";
+import FEM from "./FEM.jpg";
 
 export {
   HeroImage,
@@ -20,4 +21,5 @@ export {
   segthlon,
   nails_by_tay,
   shutopia,
+  FEM,
 };

@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { HeroImageFull, HeroImageMountain } from "../assets/images";
+import { download } from "../assets/icons";
 import { JosephReyesResume } from "../assets/documents";
 
 const Hero2 = () => {
@@ -35,11 +36,12 @@ const Hero2 = () => {
           <motion.a
             href={JosephReyesResume}
             download
-            className="resume-button font-okine font-bold text-off-white rounded-xl border border-brand-green p-3"
+            className="resume-button font-okine font-bold text-off-white rounded-xl border border-brand-green p-3 flex gap-3"
             whileHover={{ scale: 1.1, backgroundColor: "#67B99A" }}
             whileTap={{ scale: 0.9 }}
           >
             Resume
+            <img src={download} alt="download icon" width={20} />
           </motion.a>
         </div>
       </motion.div>

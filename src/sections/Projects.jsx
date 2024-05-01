@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { projects } from "../constants";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
+import { FEM } from "../assets/images";
 
 const Projects = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const Projects = () => {
           developer.
         </motion.p>
       </div>
-      <div className="flex flex-wrap justify-center gap-10 max-sm:px-2 px-10 pt-20">
+      <div className="flex flex-wrap justify-center gap-10 max-sm:px-2 px-10 pt-20 pb-20">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -59,6 +60,45 @@ const Projects = () => {
       {modalIsOpen && (
         <ProjectModal {...modalProps} handleCloseModal={setIsOpen} />
       )}
+      <div className="mt-20 max-md:mt-2 flex flex-col items-center text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="font-okine font-bold text-brand-green text-4xl"
+        >
+          The Fundamentals
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="text-xl text-off-white font-palanquin mt-10 max-md:text-lg "
+        >
+          With all the noise around the different frameworks and libraries,
+          it&apos;s easy to forget about the fundamentals. I believe in keeping
+          up with my pure html, css, and javascript because it allows me to be
+          more adaptable to other technologies since they are the backbone of
+          web development. For this reason, I have created a portfolio that
+          houses all of my vanilla html, css, and javascript challenges. I
+          continue to add to this portfolio daily as I continue to hone my
+          skills. Check it out!
+        </motion.p>
+        <motion.a
+          href="https://jreyiv.github.io/frontend-mentor/"
+          target="_blank"
+          className="mt-10"
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
+          <img src={FEM} alt="frontend-mentor image" />
+        </motion.a>
+        <p className="mt-2 font-palanquin text-off-white">click me ^</p>
+      </div>
     </section>
   );
 };
